@@ -1,0 +1,255 @@
+:root {
+  --body-bg-color: #22212C;
+  --text-color: #837E9F;
+  --bg-cards: #302F3D;
+  --bg-techs: #CB92B1;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Merriweather Sans', sans-serif;
+  font-size: 1.6rem;
+  background: var(--body-bg-color);
+  color: var(--text-color);
+  -webkit-font-smoothing: antialiased;  
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-color)
+}
+
+.container {
+  width: 100%;
+  padding: 4rem;
+  display: grid;
+  grid-template-columns: 34.8rem 1fr;
+  gap: 6rem;
+}
+
+.card {
+  background: var(--bg-cards);
+  border-radius: 2rem;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+aside {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+aside .profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3.2rem 0 4.9rem;
+}
+
+aside .profile img {
+  width: 12.8rem;
+  border-radius: 50%;
+  border: 2px solid #00ff00;
+  margin-bottom: 3rem;
+}
+
+aside .profile > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;;
+  gap: 1rem;
+}
+
+aside .profile > div h2 {
+  font-size: 2.3rem;
+  line-height: 2.89rem;
+}
+
+aside .profile > div span {
+  font-size: 1.4rem;
+  line-height: 1.63rem;
+}
+
+aside .links {
+  padding: 3rem 4rem;
+}
+
+aside .links ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+aside .links ul li {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+aside .technologies {
+  padding: 3rem 2rem;
+}
+
+aside .technologies > h4 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+aside .technologies > div {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+aside .technologies > div span {
+  display: flex;
+  justify-content: center;
+  padding: .6rem;
+  background: var(--bg-techs);
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #000;
+  line-height: 1.3rem;
+  border-radius: 3rem;
+}
+
+aside .experiences, .education {
+  padding: 3rem 2rem;
+}
+
+aside .experiences h4, .education h4 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+aside .experiences ul, .education ul {
+  margin-left: 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+aside .experiences ul li strong, .education ul li strong {
+  display: block;
+}
+
+aside .experiences ul li span, .education ul li span {
+  display: block;
+}
+
+/* Main container ============================== */
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+main .my-projects {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3rem;
+}
+
+main .my-projects h4 {
+  font-size: 2rem;
+  line-height: 2.5;
+}
+
+main .my-projects a {
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  text-decoration: none;
+  color: var(--text-color)
+}
+
+main .my-projects a:hover {
+  filter: brightness(0.9);
+  transition: all 0.1s;
+}
+
+main .projects {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+
+  width: 100%;
+}
+
+main .project {
+  background: var(--bg-cards);
+  border-radius: 2rem;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column; 
+  padding: 3rem;
+}
+
+main .project:hover {
+  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.0);
+}
+
+main .project header {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+
+  margin-bottom: 2.2rem;
+}
+
+main .project p {
+  font-size: 1.4rem;
+  line-height: 2rem;
+}
+
+main .project footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-top: 4.7rem  ;
+}
+
+main .project footer > div {
+  display: flex;
+  align-items: center;
+
+  gap: 1.6rem;
+}
+
+@media (max-width: 1080px) { 
+  .container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  aside {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .projects {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .project {
+    width: 100%;
+  }
+}
+
+
